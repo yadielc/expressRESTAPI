@@ -1,5 +1,5 @@
 const express = require('express');
-const Joi = require('joi'); 
+const Joi = require('joi');
 const app = express();
 
 // Use middleware
@@ -29,6 +29,13 @@ app.get('/api/courses/:id', (req, res) => {
 });
 
 app.post('/api/courses', (req, res) => {
+  const schema = {
+       name: Joi.string().min(3).required()
+
+  };
+
+  const result = Joi.validate(req.body, schema);
+  console.log(result); 
   if(!req.body.name || req.body.name.length < 3){
     //400 Bad Request
     res.status(400).send('Name is required and should be minimum 3 characters');
