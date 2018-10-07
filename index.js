@@ -70,8 +70,10 @@ app.put('/api/courses/:id', (req, res) => {
       res.status(400).send('Name is required and should be minimum 3 characters');
       return;
     }
-    
+
     // Update course
+    course.name = req.body.name;
+    res.send(course); 
     // Return the updated course
 });
 
