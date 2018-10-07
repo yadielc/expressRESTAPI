@@ -73,9 +73,14 @@ app.put('/api/courses/:id', (req, res) => {
 
     // Update course
     course.name = req.body.name;
-    res.send(course); 
+    res.send(course);
     // Return the updated course
 });
+
+function validateCourse(course) {
+
+  
+}
 
 
 
