@@ -1,5 +1,5 @@
 const express = require('express');
-const Joi = require('joi'); // library for validating data 
+const Joi = require('joi'); // library for validating data
 const app = express();
 
 // Use middleware
