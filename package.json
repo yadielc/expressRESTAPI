@@ -1,0 +1,22 @@
+{
+  "name": "expressrestapi",
+  "version": "1.0.0",
+  "description": "REST API in Express JavaScript framework. ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ysites/expressRESTAPI.git"
+  },
+  "author": "Yadiel <ysites@gmail.com> (http://yadielcabrera.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ysites/expressRESTAPI/issues"
+  },
+  "homepage": "https://github.com/ysites/expressRESTAPI#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
