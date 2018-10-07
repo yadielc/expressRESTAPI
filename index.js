@@ -1,4 +1,5 @@
 const express = require('express');
+const Joi = require('joi'); 
 const app = express();
 
 // Use middleware
@@ -8,7 +9,7 @@ app.use(express.json());
 const courses = [
    {id: 1, name: 'course1'},
    {id: 2, name: 'course2'},
-   {id: 3, name: 'course3'}
+   {id: 3, name: 'course3'},
 
 ];
 
@@ -28,12 +29,18 @@ app.get('/api/courses/:id', (req, res) => {
 });
 
 app.post('/api/courses', (req, res) => {
-  const course ={
-     id: course.length + 1,
+  if(!req.body.name || req.body.name.length < 3){
+    //400 Bad Request
+    res.status(400).send('Name is required and should be minimum 3 characters');
+    return;
+  }
+
+  const course = {
+     id: courses.length + 1,
      name: req.body.name
   };
   courses.push(course);
-  res.send(course); 
+  res.send(course);
 
 });
 

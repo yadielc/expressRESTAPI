@@ -18,6 +18,7 @@
   "homepage": "https://github.com/ysites/expressRESTAPI#readme",
   "dependencies": {
     "express": "^4.16.3",
+    "joi": "^13.1.0",
     "nodemon": "^1.18.4"
   }
 }
